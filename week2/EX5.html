@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ทดสอบ web Event </title>
+        <style>
+            input{
+            height: 30px;
+            width: 150px;
+            border-radius: 30px;
+            font-size: medium;
+            color: rgb(32, 153, 201);
+            }
+            select {
+                font-size: 15px;
+                border-radius: 20px;
+
+            }
+        </style>
+    </head>
+      <body>
+        <h2>แบบฝึกหัดบทที่5</h2>
+            <input id= "msg-input" placeholder="กรุณากรอกข้อความ" type="text">
+
+            <p id="show-select-msg">เลือกภาษาที่ชอบ </p>
+            <select id="select-input"> 
+                <option>เลือกภาษา</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>Go</option>
+            </select>
+            
+            <script>
+                const msgInputElement = document.getElementById('msg-input')
+                msgInputElement.addEventListener("input", function() {
+                    const msg = this.value
+                    const showMsgElement = document.getElementById('show-msg')
+                    showMsgElement.innerText ='ยินดีต้อนรับ:' + msg
+                })
+                 const msgSelectElement = document.getElementById('select-input')
+                msgInputElement.addEventListener("input", function() {
+                    const msg = this.value
+                    const showMsgElement = document.getElementById('show-select-msg')
+                    showMsgElement.innerText ='คุณเลือกภาษา:' + msg
+                })
+            
+           
+                </script>
+                </body>
+</html>
